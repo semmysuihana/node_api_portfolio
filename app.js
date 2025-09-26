@@ -90,6 +90,7 @@ app.get("/project", async (req, res) => {
   try {
     const result = await pool.query("SELECT * FROM project ORDER BY id ASC");
     res.json(result.rows);
+    console.log("ubah yah");
   } catch (err) {
     console.error(err);
     res.status(500).send("Error fetching projects");
